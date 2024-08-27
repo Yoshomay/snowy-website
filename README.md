@@ -3,5 +3,3 @@ This is a site made for my friend Snowy, made by Yoshomay (https://www.youtube.c
 The design is ripped from my own site (https://yoshomay.epizy.com)
 
 I'm using sass instead of css because inline comments are cool
-
-hope it's good ^^# snowy-website

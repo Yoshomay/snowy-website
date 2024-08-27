@@ -1,0 +1,59 @@
+.madeByYosho {
+  border-radius: 8px;
+  right: 1%;
+  font-size: 15px;
+  padding: 5px;
+  color: white;
+  opacity: 30%;
+  transition: opacity 150ms ease-out;
+}
+.madeByYosho:hover {
+  opacity: 1;
+  cursor: pointer;
+  transition: opacity 150ms ease-in;
+}
+.madeByYosho:active {
+  cursor: not-allowed;
+}
+@media screen and (max-width: 1012px) {
+  .madeByYosho {
+    visibility: hidden;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .artGridContainer {
+    width: 430px;
+    grid-template-columns: 49% 49%;
+    display: grid;
+    grid-gap: 1em;
+  }
+  @supports not (-moz-animation: none) {
+    .artGridContainer {
+      grid-template-columns: 49% 40%;
+    }
+  }
+}
+@media screen and (min-width: 481px) {
+  .artGridContainer {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    padding: 14px 0px 0 10px;
+    width: calc(100vw - 80px);
+    grid-gap: 1em;
+    margin: 0 auto;
+  }
+}
+
+.col {
+  align-self: start;
+  margin: 0px 0 20px 0;
+}
+@media screen and (max-width: 480px) {
+  .col {
+    width: 180px;
+  }
+  .col img {
+    width: 150px;
+  }
+}/*# sourceMappingURL=divcss.css.map */
