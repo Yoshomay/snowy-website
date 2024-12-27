@@ -1,37 +1,51 @@
-.madeByYosho {
-  border-radius: 8px;
-  right: 1%;
+.madeBy {
+  border-radius: 10px;
   font-size: 15px;
-  padding: 5px;
+  padding: 7px;
   color: white;
-  opacity: 30%;
-  transition: opacity 150ms ease-out;
+  width: -moz-fit-content;
+  width: fit-content;
+  position: fixed;
 }
-.madeByYosho:hover {
-  opacity: 1;
-  cursor: pointer;
-  transition: opacity 150ms ease-in;
-}
-.madeByYosho:active {
+.madeBy:active {
   cursor: not-allowed;
 }
-@media screen and (max-width: 1012px) {
-  .madeByYosho {
-    visibility: hidden;
+@media screen and (min-width: 1178px) {
+  .madeBy {
+    opacity: 30%;
+    transition: opacity 150ms ease-out;
+  }
+  .madeBy:hover {
+    opacity: 1;
+    cursor: pointer;
+    transition: opacity 150ms ease-in;
+  }
+}
+
+@media screen and (min-width: 1178px) {
+  .madeByYoshomay {
+    position: absolute;
+    top: 1%;
+    right: 1%;
   }
 }
 
 @media screen and (max-width: 480px) {
   .artGridContainer {
-    width: 430px;
-    grid-template-columns: 49% 49%;
+    width: 90%;
     display: grid;
+    grid-template-columns: 85%;
+    grid-auto-rows: auto;
+    justify-content: center;
     grid-gap: 1em;
   }
   @supports not (-moz-animation: none) {
-    .artGridContainer {
-      grid-template-columns: 49% 40%;
+    .artGridContainer .col {
+      background-color: rgba(0, 0, 0, 0);
     }
+  }
+  .artGridContainer img, .artGridContainer iframe {
+    width: 90%;
   }
 }
 @media screen and (min-width: 481px) {
@@ -43,17 +57,72 @@
     grid-gap: 1em;
     margin: 0 auto;
   }
+  .artGridContainer img, .artGridContainer iframe {
+    width: 160px;
+  }
+}
+.artGridContainer span {
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
 }
 
 .col {
   align-self: start;
-  margin: 0px 0 20px 0;
+  margin: 0 0 10px 0;
+  width: 250px;
 }
 @media screen and (max-width: 480px) {
   .col {
-    width: 180px;
+    margin: 0 auto;
   }
-  .col img {
+}
+
+.topGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 30px;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 15px;
+  padding-right: 20px;
+  padding-bottom: 10px;
+}
+
+.topGridDivs {
+  max-width: 260px;
+}
+@media screen and (max-width: 480px) {
+  .topGridDivs {
+    width: 440;
+  }
+}
+
+.settingsIcon {
+  top: 2%;
+  left: 1%;
+  position: absolute;
+  padding: 4px;
+  z-index: 10;
+}
+
+.themeSettings {
+  width: 300px;
+  padding: 3px;
+  display: flex;
+  justify-content: center;
+  z-index: 11;
+}
+
+.themeSettings hr {
+  display: none;
+}
+
+@media screen and (min-width: 800px) {
+  .themeSettings {
     width: 150px;
+    position: absolute;
+    top: 1%;
+    left: 1%;
   }
 }/*# sourceMappingURL=divcss.css.map */

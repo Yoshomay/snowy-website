@@ -4,6 +4,7 @@
   padding: 7px;
   color: white;
   width: fit-content;
+  position: fixed;
   &:active {cursor: not-allowed;}
 
 @media screen and (min-width: 1178px) {  //  on pc
@@ -21,13 +22,19 @@
 
 
 
+
+
 .artGridContainer {
-  @media screen and (max-width: 480px) {
-    @supports not (-moz-animation: none) {grid-template-columns: 49% 40%;}
-    width: 430px;
-    grid-template-columns: 49% 49%;
+  @media screen and (max-width: 480px) {  //  mobile
+    @supports not (-moz-animation: none) {  //  chromium
+      .col {background-color: rgba(0,0,0,0);}}
+    width: 90%;
     display: grid;
-    grid-gap: 1em;}
+    grid-template-columns: 85%;
+    grid-auto-rows: auto;
+    justify-content: center;
+    grid-gap: 1em;
+    img, iframe {width: 90%;}}
 
   @media screen and (min-width: 481px) {
     display: grid;
@@ -36,30 +43,73 @@
     width: calc(100vw - 80px);
     grid-gap: 1em;
     margin: 0 auto;
-}}
+    img, iframe {width: 160px}}
+    span {width: fit-content; margin: 0 auto;}
+}
 
 .col {
       align-self: start;
-      margin: 0px 0 20px 0;
+      margin: 0 0 10px 0;
+      width: 250px;
       @media screen and (max-width: 480px) {
-      width: 180px;
-      img{width: 150px;}}}
+      margin: 0 auto;
+    }}
 
 
  
       
       
 .topGrid {
-  @media screen and (max-width: 480px) {
-    display: block;
-    color: red;
-    grid-template-columns: 90%;
-  }
+  //@media screen and (min-width: 481px) {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 30px;
+    width: fit-content;
+    padding: 15px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+  //}
+  //@media screen and (max-width: 480px) {
+  //  width: 95%;
+  //  display: block;
+  //  grid-template-columns: 90%;
+  // margin-down: 10px;
+  //}
 }
 
 .topGridDivs {
   max-width: 260px;
   @media screen and (max-width: 480px) {
     width: 440;
+  }
+}
+
+
+
+
+.settingsIcon {
+  top: 2%;
+  left: 1%;
+  position: absolute;
+  padding: 4px;
+  z-index: 10;
+}
+
+.themeSettings {
+  width: 300px;
+  padding: 3px;
+  display: flex;
+  justify-content: center;
+  z-index: 11;
+}
+.themeSettings hr {
+  display: none;
+}
+@media screen and (min-width: 800px) {
+  .themeSettings {
+    width: 150px;
+    position: absolute;
+    top: 1%;
+    left: 1%;
   }
 }
