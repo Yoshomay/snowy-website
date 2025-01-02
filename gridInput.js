@@ -23,8 +23,8 @@ colCreator(button2Div,
 
 const beamStruggleDiv = document.getElementById('beamStruggle');
 colCreator(beamStruggleDiv, 
-    'images/art/beamStruggle.png', 
-    'images/art/lowres/beamStruggle_lowres.webp',`
+    'images/art/beamstruggle.png', 
+    'images/art/lowres/beamstruggle_lowres.webp',`
     Dragon Ball Z beam struggle
     `);
 
