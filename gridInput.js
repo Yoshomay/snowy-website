@@ -5,7 +5,12 @@ function colCreator(divid, image, imageLowres, text) {
     ${text}
     </div>`}
 
-
+const nomDiv = document.getElementById('nom');
+colCreator(nomDiv, 
+    'images/art/nom.png', 
+    'images/art/lowres/nom_lowres.webp',`
+    Snowy nomming
+    `);
 
 const christmasRemakeDiv = document.getElementById('christmasRemake');
 colCreator(christmasRemakeDiv, 
@@ -19,6 +24,13 @@ colCreator(button2Div,
     'images/art/button2.png', 
     'images/art/lowres/button2_lowres.webp',`
     Button 2
+    `);
+
+const snowy_racismDiv = document.getElementById('snowy_racism');
+colCreator(snowy_racismDiv, 
+        'images/art/snowy_racism_thursday.gif',
+        'images/art/snowy_racism_thursday.gif',`
+    Snowy version of <a href="https://tenor.com/view/racism-gif-25147153" target="_blank">this meme</a>
     `);
 
 const beamStruggleDiv = document.getElementById('beamStruggle');
@@ -276,6 +288,14 @@ colCreator(socks2Div,
     'images/art/lowres/socks2_lowres.webp',`
     Another redraw
     `);
+
+const yosho_racismDiv = document.getElementById('yosho_racism');
+colCreator(yosho_racismDiv, 
+        'images/art/yosho_racism_thursday.gif',
+        'images/art/yosho_racism_thursday.gif',`
+    Snowy version of <a href="https://tenor.com/view/racism-gif-25147153" target="_blank">this meme</a>
+    `);
+
 
 const girlbossDiv = document.getElementById('girlboss');
 colCreator(girlbossDiv, 
