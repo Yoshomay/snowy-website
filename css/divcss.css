@@ -22,14 +22,6 @@
   }
 }
 
-@media screen and (min-width: 1178px) {
-  .madeByYoshomay {
-    position: absolute;
-    top: 1%;
-    right: 1%;
-  }
-}
-
 @media screen and (max-width: 480px) {
   .artGridContainer {
     overflow: hidden;
@@ -80,14 +72,22 @@
 }
 
 .topGrid {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  gap: 30px;
-  width: -moz-fit-content;
-  width: fit-content;
-  padding: 15px;
-  padding-right: 20px;
-  padding-bottom: 10px;
+  max-width: 1000px;
+}
+.topGrid .col {
+  margin: 0 auto;
+}
+@media screen and (max-width: 627px) {
+  .topGrid {
+    width: -moz-fit-content;
+    width: fit-content;
+    grid-template-columns: 1fr;
+  }
+}
+@media screen and (max-width: 480px) {
+  .topGrid .col {
+    margin-bottom: 70px;
+  }
 }
 
 .topGridDivs {

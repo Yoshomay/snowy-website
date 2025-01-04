@@ -14,13 +14,6 @@
 &:hover {opacity: 1; cursor: pointer; transition: opacity 150ms ease-in;}
 }}
 
-.madeByYoshomay {
-  @media screen and (min-width: 1178px) {  //  on pc
-    position: absolute;
-    top: 1%; right: 1%;}
-}
-
-
 
 
 
@@ -62,21 +55,10 @@
       
       
 .topGrid {
-  //@media screen and (min-width: 481px) {
-    display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
-    gap: 30px;
-    width: fit-content;
-    padding: 15px;
-    padding-right: 20px;
-    padding-bottom: 10px;
-  //}
-  //@media screen and (max-width: 480px) {
-  //  width: 95%;
-  //  display: block;
-  //  grid-template-columns: 90%;
-  // margin-down: 10px;
-  //}
+    .col {margin: 0 auto;}
+    @media screen and (max-width: 627px) {width: fit-content; grid-template-columns: 1fr;}
+    @media screen and (max-width: 480px) {.col {margin-bottom: 70px;}}
+    max-width: 1000px;
 }
 
 .topGridDivs {

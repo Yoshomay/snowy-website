@@ -19,6 +19,21 @@ colCreator(christmasRemakeDiv,
     <br>Christmas art 2024 remake</a>
     `);
 
+const pooterDiv = document.getElementById('pooter');
+colCreator(pooterDiv, 
+    'images/art/pooter.png', 
+    'images/art/lowres/pooter_lowres.webp',`
+    The 2 gay's playing games together 
+    `);
+
+    
+const strangleDiv = document.getElementById('strangle');
+colCreator(strangleDiv, 
+    'images/art/strangle.png', 
+    'images/art/lowres/strangle_lowres.webp',`
+    Yosho strangeling snowy
+    `);
+
 const button2Div = document.getElementById('button2');
 colCreator(button2Div, 
     'images/art/button2.png', 
@@ -543,6 +558,19 @@ colCreator(sinInABoatDiv,
 
   //  others
 
+const arttrade3Div = document.getElementById('arttrade3');
+colCreator(arttrade3Div, 
+    'images/art/arttrade3.png', 
+    'images/art/lowres/arttrade3_lowres.webp',`
+    Another art trade
+    `);
+
+const friendDiv = document.getElementById('friend');
+colCreator(friendDiv, 
+    'images/art/friend.png', 
+    'images/art/lowres/friend_lowres.webp',`
+    Commision for a friend
+    `);
 
 const aspenDiv = document.getElementById('aspen');
 colCreator(aspenDiv, 
@@ -774,3 +802,4 @@ colCreator(acrDiv,
     'images/art/lowres/acr_lowres.webp',`
     car
     `);
+    
