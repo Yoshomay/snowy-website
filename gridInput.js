@@ -293,7 +293,7 @@ const yosho_racismDiv = document.getElementById('yosho_racism');
 colCreator(yosho_racismDiv, 
         'images/art/yosho_racism_thursday.gif',
         'images/art/yosho_racism_thursday.gif',`
-    Snowy version of <a href="https://tenor.com/view/racism-gif-25147153" target="_blank">this meme</a>
+    Yosho version of <a href="https://tenor.com/view/racism-gif-25147153" target="_blank">this meme</a>
     `);
 
 
