@@ -5,6 +5,13 @@ function colCreator(divid, image, imageLowres, text) {
     ${text}
     </div>`}
 
+const sleepiDiv = document.getElementById('sleepi');
+colCreator(sleepiDiv, 
+    'images/art/sleepi.png', 
+    'images/art/lowres/sleepi_lowres.webp',`
+    He's too sleepi for his own good
+    `);
+
 const nomDiv = document.getElementById('nom');
 colCreator(nomDiv, 
     'images/art/nom.png', 
@@ -289,6 +296,14 @@ colCreator(earlySnoDiv,
 
 //  yosho
 
+
+
+const crackDiv = document.getElementById('crack');
+colCreator(crackDiv, 
+    'images/art/crack.png', 
+    'images/art/lowres/crack_lowres.webp',`
+    Yosho died qwq
+    `);
 
 const king2Div = document.getElementById('king2');
 colCreator(king2Div, 
