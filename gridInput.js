@@ -5,6 +5,14 @@ function colCreator(divid, image, imageLowres, text) {
     ${text}
     </div>`}
 
+
+const snowySelfieDiv = document.getElementById('snowySelfie');
+colCreator(snowySelfieDiv, 
+    'images/art/snowySelfie.png', 
+    'images/art/lowres/snowySelfie_lowres.webp',`
+    He felt good enough to take a pic of himself (perspective testing)
+    `);
+
 const sleepiDiv = document.getElementById('sleepi');
 colCreator(sleepiDiv, 
     'images/art/sleepi.png', 
@@ -296,7 +304,19 @@ colCreator(earlySnoDiv,
 
 //  yosho
 
+const yoshoKitchenLickDiv = document.getElementById('yoshoKitchenLick');
+colCreator(yoshoKitchenLickDiv, 
+    'images/art/yoshoKitchenLick.png', 
+    'images/art/lowres/yoshoKitchenLick_lowres.webp',`
+    Snowy lickin yosho uwu
+    `);
 
+const yoshoValentinesDiv = document.getElementById('yoshoValentines');
+colCreator(yoshoValentinesDiv, 
+    'images/art/yoshoValentines.png', 
+    'images/art/lowres/yoshoValentines_lowres.webp',`
+    Valentines day gift
+    `);
 
 const crackDiv = document.getElementById('crack');
 colCreator(crackDiv, 
