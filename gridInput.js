@@ -5,6 +5,7 @@ function colCreator(divid, image, imageLowres, text) {
     ${text}
     </div>`}
 
+    
 
 const snowySelfieDiv = document.getElementById('snowySelfie');
 colCreator(snowySelfieDiv, 
