@@ -5,6 +5,27 @@ function colCreator(divid, image, imageLowres, text) {
     ${text}
     </div>`}
 
+const suckmydickDiv = document.getElementById('suckmydick');
+colCreator(suckmydickDiv, 
+    'images/art/suckmydick.png', 
+    'images/art/lowres/suckmydick_lowres.webp',`
+    He is getting desperate
+    `);
+
+const snowAtNightRemasteredDiv = document.getElementById('snowAtNightRemastered');
+colCreator(snowAtNightRemasteredDiv, 
+    'images/art/snowAtNightRemastered.png', 
+    'images/art/lowres/snowAtNightRemastered_lowres.webp',`
+    Remake of the snowy at night piece
+    `);
+
+const makeout2Div = document.getElementById('makeout2');
+colCreator(makeout2Div, 
+    'images/art/makeout2.png', 
+    'images/art/lowres/makeout2_lowres.webp',`
+    Part 2 of the previous make out piece
+    `);
+
 const snowySelfieDiv = document.getElementById('snowySelfie');
 colCreator(snowySelfieDiv, 
     'images/art/snowySelfie.png', 
@@ -206,7 +227,7 @@ const sebDiv = document.getElementById('seb');
 colCreator(sebDiv, 
     'images/art/seb.png', 
     'images/art/lowres/seb_lowres.webp',`
-    Sunset
+    seb qwq
     `);
 
 const snoDiv = document.getElementById('sno');
@@ -300,6 +321,13 @@ colCreator(earlySnoDiv,
     early sno
     `);
 
+const firstsnowyDiv = document.getElementById('firstsnowy');
+colCreator(firstsnowyDiv, 
+    'images/art/firstsnowy.png', 
+    'images/art/lowres/firstsnowy_lowres.webp',`
+    Possibly first art of snowy
+    `);
+
 
 //  yosho
 
@@ -358,6 +386,13 @@ colCreator(makeoutDiv,
     'images/art/makeout.png', 
     'images/art/lowres/makeout_lowres.webp',`
     owo
+    `);
+
+const holdingHandsDiv = document.getElementById('holdingHands');
+colCreator(holdingHandsDiv, 
+    'images/art/holdingHands.png', 
+    'images/art/lowres/holdingHands_lowres.webp',`
+    They prob on a gay ass date together
     `);
 
 const cuddleDiv = document.getElementById('cuddle');
@@ -591,6 +626,14 @@ colCreator(sinInABoatDiv,
 
 
   //  others
+
+
+const frenDiv = document.getElementById('fren');
+colCreator(frenDiv, 
+    'images/art/fren.png', 
+    'images/art/lowres/fren_lowres.webp',`
+    Another art trade
+    `);
 
 const arttrade3Div = document.getElementById('arttrade3');
 colCreator(arttrade3Div, 

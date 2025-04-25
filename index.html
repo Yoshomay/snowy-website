@@ -16,6 +16,8 @@
     <meta property="og:site_name" content="Snowy" />
     <meta name="darkreader-lock">
 
+    <script>let imageState = 0;</script>
+
     </head>
     <body>
 
@@ -61,6 +63,9 @@
         <div style="max-width: 40px;"><a target="_blank" title="he a cute">Snowy</a><br></div><br>
         <div class="artGridContainer">
 
+        <span id="suckmydick"></span>
+        <span id="snowAtNightRemastered"></span>
+        <span id="makeout2"></span>
         <span id="snowySelfie"></span>
         <span id="sleepi"></span>
         <span id="nom"></span>
@@ -103,8 +108,34 @@
         <span id="whoIsThis"></span>
         <span id="butWhen"></span>
         <span id="earlySno"></span>
+        <span id="firstsnowy"></span>
 
-    
+<script>
+	function changeImage(id, img1, img2) {
+	  var image = document.getElementById(id);
+	  if (imageState == 0) {  //  front view
+		  imageState = 1;
+		  image.src = img2;
+	} else if (imageState == 1) {  //  back view
+		  imageState = 0;
+		  image.src = img1;
+	}}	
+</script>
+        
+	<div style="max-width: 190px;" class="col">
+    <a id="mc_"><img src="images/art/mc_2-1.png" style="width: 160px; cursor: pointer;" onclick="changeImage('img2', 'images/art/mc_2-1.png', 'images/art/mc_2-2.png');" id="img2"></a>
+	<span style="cursor: not-allowed; font-size: 75%;">Click to switch view</span><br>
+    Snowy Minecraft Skin
+		<a href="/images/art/mc2.png" target="_blank" alt="download"><button>Download</button></a>
+    </div>    
+
+
+	<div style="max-width: 190px;" class="col">
+    <a id="mc_"><img src="images/art/mc_1-1.png" style="width: 160px; cursor: pointer;" onclick="changeImage('img1', 'images/art/mc_1-1.png', 'images/art/mc_1-2.png');" id="img1"></a>
+	<span style="cursor: not-allowed; font-size: 75%;">Click to switch view</span><br>
+    Same as before but now with a maid outfit
+		<a href="/images/art/mc1.png" target="_blank" alt="download"><button>Download</button></a>
+    </div>
 
         <br></div></div><br><br>
 
@@ -126,6 +157,7 @@
         <span id="yosho_racism"></span>
         <span id="girlboss"></span>
         <span id="makeout"></span>
+        <span id="holdingHands"></span>
         <span id="cuddle"></span>
         <span id="timeofhislife"></span>
         <span id="browser"></span>
@@ -180,6 +212,7 @@
         <div style="max-width: 40px;">Others</div><br>
         <div class="artGridContainer">
 
+        <span id="fren"></span>
         <span id="arttrade3"></span>
         <span id="friend"></span>
         <span id="aspen"></span>
