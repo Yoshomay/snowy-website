@@ -627,6 +627,12 @@ colCreator(sinInABoatDiv,
 
   //  others
 
+const snowiDiv = document.getElementById('snowi');
+colCreator(snowiDiv, 
+    'images/art/snowi.png', 
+    'images/art/lowres/snowi_lowres.webp',`
+    Another art trade, but this time with another <a target="_blank" href="https://bsky.app/profile/snowiwakgoreng.bsky.social">snowi</a> lol
+    `);
 
 const frenDiv = document.getElementById('fren');
 colCreator(frenDiv, 
