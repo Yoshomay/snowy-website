@@ -6,13 +6,14 @@ body {
   color: black;
 }
 
-.topGrid {
-  padding-bottom: 70px;
+.links {
+  max-width: 402px;
   border-radius: 0;
   background-color: rgb(206, 227, 248);
   border-style: solid;
   border: 2px;
   border-color: rgb(95, 153, 207);
+  padding-bottom: 25px;
   background-image: url(../images/backgrounds/oldRedditLogo.webp);
   background-position: bottom left 2%;
   background-size: 20%;
@@ -69,12 +70,12 @@ img {
 
 .artGridContainer {
   border: none;
-  background-color: white;
+  background-color: e2dbd2;
 }
 
 .col {
   background-color: white;
-  border: none;
+  border: solid #336699 1px;
   padding: 1px;
 }
 
