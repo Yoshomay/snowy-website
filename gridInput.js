@@ -1,888 +1,665 @@
-function colCreator(divid, image, imageLowres, text) {
+/*function colCreator(divid, image, imageLowres, text) {
     divid.innerHTML = `
     <div class="col">
     <a target="_blank" href="${image}"><img src="${imageLowres}"></a>
     ${text}
+    </div>`}*/
+
+function colCreator(id, text, whichPage) {
+
+    if (id.endsWith('.gif')) {fileType = 'gif'; lowresFileType = 'gif'; id = id.slice(0, -4);}
+    else if (id.endsWith('.webm')) {fileType = 'webm'; lowresFileType = 'webm'; id = id.slice(0, -5);}
+    else {fileType = 'png'; lowresFileType = 'webp'}
+    
+
+    var idDiv = document.getElementById(id);
+    if (whichPage === 0) {pathToFile = 'images/art/'}
+    else if (whichPage === 1) {pathToFile = 'images/snowy/'}
+
+    if (fileType === 'webm') {idDiv.innerHTML = `
+    <div class="col">
+        <video controls width="160px">
+            <source src="${pathToFile}lowres/${id}.webm" type="video/webm">
+            Your browser does not support the video tag.
+        </video><br>
+        ${text}
+        
     </div>`}
 
-const suckmydickDiv = document.getElementById('suckmydick');
-colCreator(suckmydickDiv, 
-    'images/art/suckmydick.png', 
-    'images/art/lowres/suckmydick_lowres.webp',`
+    else {idDiv.innerHTML = `
+    <div class="col">
+        <a target="_blank" href="${pathToFile}${id}.${fileType}"><img src="${pathToFile}lowres/${id}.${lowresFileType}"></a>
+        ${text}
+    </div>`}
+
+}
+
+
+if (document.getElementById('mainPage')) {
+colCreator('suckmydick', `
     He is getting desperate
-    `);
+    `, 0);
 
-const snowAtNightRemasteredDiv = document.getElementById('snowAtNightRemastered');
-colCreator(snowAtNightRemasteredDiv, 
-    'images/art/snowAtNightRemastered.png', 
-    'images/art/lowres/snowAtNightRemastered_lowres.webp',`
+
+colCreator('sweaterRemake',`
+    Another remake, this time of the sweater one
+    `, 0)
+
+colCreator('snowAtNightRemastered',`
     Remake of the snowy at night piece
-    `);
+    ` , 0);
 
-const makeout2Div = document.getElementById('makeout2');
-colCreator(makeout2Div, 
-    'images/art/makeout2.png', 
-    'images/art/lowres/makeout2_lowres.webp',`
+colCreator('makeout2',`
     Part 2 of the previous make out piece
-    `);
+    ` , 0);
 
-const snowySelfieDiv = document.getElementById('snowySelfie');
-colCreator(snowySelfieDiv, 
-    'images/art/snowySelfie.png', 
-    'images/art/lowres/snowySelfie_lowres.webp',`
+colCreator('snowySelfie',`
     He felt good enough to take a pic of himself (perspective testing)
-    `);
+    ` , 0);
 
-const sleepiDiv = document.getElementById('sleepi');
-colCreator(sleepiDiv, 
-    'images/art/sleepi.png', 
-    'images/art/lowres/sleepi_lowres.webp',`
+colCreator('sleepi',`
     He's too sleepi for his own good
-    `);
+    ` , 0);
 
-const nomDiv = document.getElementById('nom');
-colCreator(nomDiv, 
-    'images/art/nom.png', 
-    'images/art/lowres/nom_lowres.webp',`
+colCreator('nom',`
     Snowy nomming
-    `);
+    ` , 0);
 
-const christmasRemakeDiv = document.getElementById('christmasRemake');
-colCreator(christmasRemakeDiv, 
-    'images/art/christmasRemake.png', 
-    'images/art/lowres/christmasRemake_lowres.webp',`
+colCreator('christmasRemake',`
     <br>Christmas art 2024 remake</a>
-    `);
+    ` , 0);
 
-const pooterDiv = document.getElementById('pooter');
-colCreator(pooterDiv, 
-    'images/art/pooter.png', 
-    'images/art/lowres/pooter_lowres.webp',`
+colCreator('pooter',`
     The 2 gay's playing games together 
-    `);
+    ` , 0);
 
     
-const strangleDiv = document.getElementById('strangle');
-colCreator(strangleDiv, 
-    'images/art/strangle.png', 
-    'images/art/lowres/strangle_lowres.webp',`
+colCreator('strangle',`
     Yosho strangeling snowy
-    `);
+    ` , 0);
 
-const button2Div = document.getElementById('button2');
-colCreator(button2Div, 
-    'images/art/button2.png', 
-    'images/art/lowres/button2_lowres.webp',`
+colCreator('button2',`
     Button 2
-    `);
+    ` , 0);
 
-const snowy_racismDiv = document.getElementById('snowy_racism');
-colCreator(snowy_racismDiv, 
-        'images/art/snowy_racism_thursday.gif',
-        'images/art/snowy_racism_thursday.gif',`
+colCreator('snowy_racism.gif',`
     Snowy version of <a href="https://tenor.com/view/racism-gif-25147153" target="_blank">this meme</a>
-    `);
+    ` , 0);
 
-const beamStruggleDiv = document.getElementById('beamStruggle');
-colCreator(beamStruggleDiv, 
-    'images/art/beamstruggle.png', 
-    'images/art/lowres/beamstruggle_lowres.webp',`
+colCreator('beamStruggle',`
     Dragon Ball Z beam struggle
-    `);
+    ` , 0);
 
-const snowymcdonaldsDiv = document.getElementById('snowymcdonalds');
-colCreator(snowymcdonaldsDiv, 
-    'images/art/snowymcdonalds.png', 
-    'images/art/lowres/snowymcdonalds_lowres.webp',`
+colCreator('snowymcdonalds',`
     Snowy workin minimum wage
-    `);
+    ` , 0);
 
-const drawinDiv = document.getElementById('drawin');
-colCreator(drawinDiv, 
-    'images/art/drawin.png', 
-    'images/art/lowres/drawin_lowres.webp',`
+colCreator('drawin',`
     He drawin in Snowy's irl room
-    `);
+    ` , 0);
 
-const freestylingDiv = document.getElementById('freestyling');
-colCreator(freestylingDiv, 
-    'images/art/freestyling.png', 
-    'images/art/lowres/freestyling_lowres.webp',`
+colCreator('freestyling',`
     Always be sayin gay things
-    `);
+    ` , 0);
 
-const eepyDiv = document.getElementById('eepy');
-colCreator(eepyDiv, 
-    'images/art/eepy.png', 
-    'images/art/lowres/eepy_lowres.webp',`
+colCreator('eepy',`
     He is way to eepy
-    `);
+    ` , 0);
 
-const yesgayDiv = document.getElementById('yesgay');
-colCreator(yesgayDiv, 
-    'images/art/yesgay.png', 
-    'images/art/lowres/yesgay_lowres.webp',`
+colCreator('yesgay',`
     He is gay
-    `);
+    ` , 0);
 
-const redrawDiv = document.getElementById('redraw');
-colCreator(redrawDiv, 
-    'images/art/redraw.png', 
-    'images/art/lowres/redraw_lowres.webp',`
+colCreator('redraw',`
     Redraw of the socks
-    `);
+    ` , 0);
 
-const sitDiv = document.getElementById('sit');
-colCreator(sitDiv, 
-    'images/art/sit.png', 
-    'images/art/lowres/sit_lowres.webp',`
+colCreator('sit',`
     Sit
-    `);
+    ` , 0);
 
-const hootersRemasterDiv = document.getElementById('hootersRemaster');
-colCreator(hootersRemasterDiv, 
-    'images/art/hootersRemaster.png', 
-    'images/art/lowres/hootersRemaster_lowres.webp',`
+colCreator('hootersRemaster',`
     Hooters remaster
-    `);
+    ` , 0);
 
-const flippingoffDiv = document.getElementById('flippingoff');
-colCreator(flippingoffDiv, 
-    'images/art/flippingoff.png', 
-    'images/art/lowres/flippingoff_lowres.webp',`
+colCreator('flippingoff',`
     Snowy flipping off yosho
-    `);
+    ` , 0);
 
-const pissDiv = document.getElementById('piss');
-colCreator(pissDiv, 
-    'images/art/piss.png', 
-    'images/art/lowres/piss_lowres.webp',`
+colCreator('piss',`
     lemonade (not piss)
-    `);
+    ` , 0);
 
-const howtocatDiv = document.getElementById('howtocat');
-colCreator(howtocatDiv, 
-    'images/art/howtocat.png', 
-    'images/art/lowres/howtocat_lowres.webp',`
+colCreator('howtocat',`
     how to cat (he's not one)
-    `);
+    ` , 0);
 
-const buttonDiv = document.getElementById('button');
-colCreator(buttonDiv, 
-    'images/art/button.png', 
-    'images/art/lowres/button_lowres.webp',`
+colCreator('button',`
     Snowy pressing a button
-    `);
+    `, 0);
 
-const hootersDiv = document.getElementById('hooters');
-colCreator(hootersDiv, 
-    'images/art/hooters.png', 
-    'images/art/lowres/hooters_lowres.webp',`
+colCreator('sweater',`
+    sweater
+    `, 0);
+
+colCreator('hooters',`
     Snowy working at femboy hooters
-    `);
+    `, 0);
 
-const maidsnowDiv = document.getElementById('maidsnow');
-colCreator(maidsnowDiv, 
-    'images/art/maidsnow.png', 
-    'images/art/lowres/maidsnow_lowres.webp',`
+colCreator('maidsnow',`
     Maid Snow
-    `);
+    `, 0);
 
-const mewDiv = document.getElementById('mew');
-colCreator(mewDiv, 
-    'images/art/mew.png', 
-    'images/art/lowres/mew_lowres.webp',`
+colCreator('mew',`
     mew
-    `);
+    `, 0);
 
-const noMewoDiv = document.getElementById('noMewo');
-colCreator(noMewoDiv, 
-    'images/art/noMewo.png', 
-    'images/art/lowres/noMewo_lowres.webp',`
+colCreator('noMewo',`
     No meow
-    `);
+    `, 0);
 
-const mmmmeowDiv = document.getElementById('mmmmeow');
-colCreator(mmmmeowDiv, 
-    'images/art/mmmmeow.gif', 
-    'images/art/mmmmeow.gif',`
+colCreator('mmmmeow.gif',`
     mmmmeow
-    `);
+    `, 0);
     
-const mmmmShadersDiv = document.getElementById('mmmmShaders');
-colCreator(mmmmShadersDiv, 
-    'images/art/mmmmShaders.png', 
-    'images/art/lowres/mmmmShaders_lowres.webp',`
+colCreator('mmmmShaders',`
     Shaders
-    `);
+    `, 0);
 
-const sunsetDiv = document.getElementById('sunset');
-colCreator(sunsetDiv, 
-    'images/art/sunset.png', 
-    'images/art/lowres/sunset_lowres.webp',`
+colCreator('sunset',`
     Sunset
-    `);
+    `, 0);
 
-const sebDiv = document.getElementById('seb');
-colCreator(sebDiv, 
-    'images/art/seb.png', 
-    'images/art/lowres/seb_lowres.webp',`
+colCreator('seb',`
     seb qwq
-    `);
+    `, 0);
 
-const snoDiv = document.getElementById('sno');
-colCreator(snoDiv, 
-    'images/art/sno.png', 
-    'images/art/lowres/sno_lowres.webp',`
+colCreator('sno',`
     sno
-    `);
+    `, 0);
 
-const sadSnoDiv = document.getElementById('sadSno');
-colCreator(sadSnoDiv, 
-    'images/art/sadSno.png', 
-    'images/art/lowres/sadSno_lowres.webp',`
+colCreator('sadSno',`
     Sad sno
-    `);
+    `, 0);
 
-const mhmDiv = document.getElementById('mhm');
-colCreator(mhmDiv, 
-    'images/art/mhm.png', 
-    'images/art/lowres/mhm_lowres.webp',`
+colCreator('mhm',`
     mhm
-    `);
+    `, 0);
 
-const sadSnoqwqDiv = document.getElementById('sadSnoqwq');
-colCreator(sadSnoqwqDiv, 
-    'images/art/sadSnoqwq.png', 
-    'images/art/lowres/sadSnoqwq_lowres.webp',`
+colCreator('sadSnoqwq',`
     Sad snow qwq
-    `);
+    `, 0);
 
-const mewoDiv = document.getElementById('mewo');
-colCreator(mewoDiv, 
-    'images/art/mewo.png', 
-    'images/art/lowres/mewo_lowres.webp',`
+colCreator('mewo',`
     mewo
-    `);
+    `, 0);
 
-const wowDiv = document.getElementById('wow');
-colCreator(wowDiv, 
-    'images/art/wow.png', 
-    'images/art/lowres/wow_lowres.webp',`
+colCreator('wow',`
     wow.png
-    `);
+    `, 0);
 
-const snowAtNightDiv = document.getElementById('snowAtNight');
-colCreator(snowAtNightDiv, 
-    'images/art/snowAtNight.png', 
-    'images/art/lowres/snowAtNight_lowres.webp',`
+colCreator('snowAtNight',`
     Snow at night
-    `);
+    `, 0);
     
-const relacDiv = document.getElementById('relac');
-colCreator(relacDiv, 
-    'images/art/relac.png', 
-    'images/art/lowres/relac_lowres.webp',`
+colCreator('relac',`
     Snow relacing
-    `);
+    `, 0);
 
-const headDiv = document.getElementById('head');
-colCreator(headDiv, 
-    'images/art/head.png', 
-    'images/art/lowres/head_lowres.webp',`
+colCreator('head',`
     head
-    `);
+    `, 0);
 
-const owoDiv = document.getElementById('owo');
-colCreator(owoDiv, 
-    'images/art/owo.png', 
-    'images/art/lowres/owo_lowres.webp',`
+colCreator('owo',`
     Snowy wearing the cute socks &#128563
-    `);
+    `, 0);
 
-const whoIsThisDiv = document.getElementById('whoIsThis');
-colCreator(whoIsThisDiv, 
-    'images/art/whoIsThis.png', 
-    'images/art/lowres/whoIsThis_lowres.webp',`
+colCreator('whoIsThis',`
     who is this and what have you done with snowy
-    `);
+    `, 0);
 
-const butWhenDiv = document.getElementById('butWhen');
-colCreator(butWhenDiv, 
-    'images/art/butWhen.png', 
-    'images/art/lowres/butWhen_lowres.webp',`
+colCreator('butWhen',`
     but when
-    `);
+    `, 0);
 
-const earlySnoDiv = document.getElementById('earlySno');
-colCreator(earlySnoDiv, 
-    'images/art/earlySno.png', 
-    'images/art/lowres/earlySno_lowres.webp',`
+colCreator('earlySno',`
     early sno
-    `);
+    `, 0);
 
-const firstsnowyDiv = document.getElementById('firstsnowy');
-colCreator(firstsnowyDiv, 
-    'images/art/firstsnowy.png', 
-    'images/art/lowres/firstsnowy_lowres.webp',`
+colCreator('firstsnowy',`
     Possibly first art of snowy
-    `);
+    `, 0);
 
 
 //  yosho
 
-const yoshoKitchenLickDiv = document.getElementById('yoshoKitchenLick');
-colCreator(yoshoKitchenLickDiv, 
-    'images/art/yoshoKitchenLick.png', 
-    'images/art/lowres/yoshoKitchenLick_lowres.webp',`
+colCreator('yoshoKitchenLick',`
     Snowy lickin yosho uwu
-    `);
+    `, 0);
 
-const yoshoValentinesDiv = document.getElementById('yoshoValentines');
-colCreator(yoshoValentinesDiv, 
-    'images/art/yoshoValentines.png', 
-    'images/art/lowres/yoshoValentines_lowres.webp',`
+colCreator('yoshoValentines',`
     Valentines day gift
-    `);
+    `, 0);
 
-const crackDiv = document.getElementById('crack');
-colCreator(crackDiv, 
-    'images/art/crack.png', 
-    'images/art/lowres/crack_lowres.webp',`
+colCreator('crack',`
     Yosho died qwq
-    `);
+    `, 0);
 
-const king2Div = document.getElementById('king2');
-colCreator(king2Div, 
-    'images/art/king2.png', 
-    'images/art/lowres/king2_lowres.webp',`
+colCreator('king2',`
     Drawover #3
-    `);
+    `, 0);
 
-const socks2Div = document.getElementById('socks2');
-colCreator(socks2Div, 
-    'images/art/socks2.png', 
-    'images/art/lowres/socks2_lowres.webp',`
+colCreator('socks2',`
     Another redraw
-    `);
+    `, 0);
 
-const yosho_racismDiv = document.getElementById('yosho_racism');
-colCreator(yosho_racismDiv, 
-        'images/art/yosho_racism_thursday.gif',
-        'images/art/yosho_racism_thursday.gif',`
+colCreator('yosho_racism.gif',`
     Yosho version of <a href="https://tenor.com/view/racism-gif-25147153" target="_blank">this meme</a>
-    `);
+    `, 0);
 
 
-const girlbossDiv = document.getElementById('girlboss');
-colCreator(girlbossDiv, 
-    'images/art/girlboss.png', 
-    'images/art/lowres/girlboss_lowres.webp',`
+colCreator('girlboss',`
     Redraw of a previous yosho art
-    `);
+    `, 0);
 
-const makeoutDiv = document.getElementById('makeout');
-colCreator(makeoutDiv, 
-    'images/art/makeout.png', 
-    'images/art/lowres/makeout_lowres.webp',`
+colCreator('makeout',`
     owo
-    `);
+    `, 0);
 
-const holdingHandsDiv = document.getElementById('holdingHands');
-colCreator(holdingHandsDiv, 
-    'images/art/holdingHands.png', 
-    'images/art/lowres/holdingHands_lowres.webp',`
+colCreator('holdingHands',`
     They prob on a gay ass date together
-    `);
+    `, 0);
 
-const cuddleDiv = document.getElementById('cuddle');
-colCreator(cuddleDiv, 
-    'images/art/cuddle.png', 
-    'images/art/lowres/cuddle_lowres.webp',`
+colCreator('cuddle',`
     Cuddle
-    `);
+    `, 0);
 
-const timeofhislifeDiv = document.getElementById('timeofhislife');
-colCreator(timeofhislifeDiv, 
-    'images/art/timeofhislife.png', 
-    'images/art/lowres/timeofhislife_lowres.webp',`
+colCreator('timeofhislife',`
     He is not having the time of his life
-    `);
+    `, 0);
 
-const browserDiv = document.getElementById('browser');
-colCreator(browserDiv, 
-    'images/art/browser.png', 
-    'images/art/lowres/browser_lowres.webp',`
+colCreator('browser',`
     He saw your browsing history
-    `);
+    `, 0);
 
-const mcchairDiv = document.getElementById('mcchair');
-colCreator(mcchairDiv, 
-    'images/art/mcchair.png', 
-    'images/art/lowres/mcchair_lowres.webp',`
+colCreator('mcchair',`
     Drawover of a Minecraft screenshot
-    `);
+    `, 0);
 
-const sunset3Div = document.getElementById('sunset3');
-colCreator(sunset3Div, 
-    'images/art/sunset3.png', 
-    'images/art/lowres/sunset3_lowres.webp',`
+colCreator('sunset3',`
     Sunset
-    `);
+    `, 0);
 
-const boopqwqDiv = document.getElementById('boopqwq');
-colCreator(boopqwqDiv, 
-    'images/art/boopqwq.png', 
-    'images/art/lowres/boopqwq_lowres.webp',`
+colCreator('boopqwq',`
     Snowy being rude booping me
-    `);
+    `, 0);
 
-const yoshohlDiv = document.getElementById('yoshohl');
-colCreator(yoshohlDiv, 
-    'images/art/yoshohl.png', 
-    'images/art/lowres/yoshohl_lowres.webp',`
+colCreator('yoshohl',`
     Yosho doing the <a href="https://combineoverwiki.net/wiki/Category:Half-Life_promotional_artwork#/media/File:Gordon_HL1_promo.jpg" target="_blank">
     Half Life 1 promotional artwork</a> pose
-    `);
+    `, 0);
 
-const cumDiv = document.getElementById('cum');
-colCreator(cumDiv, 
-    'images/art/cum.png', 
-    'images/art/lowres/cum_lowres.webp',`
+colCreator('cum',`
     Comic part 1
-    `);
+    `, 0);
 
-const cum2Div = document.getElementById('cum2');
-colCreator(cum2Div, 
-    'images/art/cum2.png', 
-    'images/art/lowres/cum2_lowres.webp',`
+colCreator('cum2',`
     part 2
-    `);
+    `, 0);
 
-const yoshohugDiv = document.getElementById('yoshohug');
-colCreator(yoshohugDiv, 
-    'images/art/yoshohug.png', 
-    'images/art/lowres/yoshohug_lowres.webp',`
+colCreator('yoshohug',`
     Yosho hug
-    `);
+    `, 0);
 
-const gtaDiv = document.getElementById('gta');
-colCreator(gtaDiv, 
-    'images/art/gta.png', 
-    'images/art/lowres/gta_lowres.webp',`
+colCreator('gta',`
     Yosho outrunning the cops in gta
-    `);
+    `, 0);
 
-const maidowoDiv = document.getElementById('maidowo');
-colCreator(maidowoDiv, 
-    'images/art/maidowo.png', 
-    'images/art/lowres/maidowo_lowres.webp',`
+colCreator('maidowo',`
     Maid Yosho owo
-    `);
+    `, 0);
 
-const snowy_is_a_peasentDiv = document.getElementById('snowy_is_a_peasent');
-colCreator(snowy_is_a_peasentDiv, 
-    'images/art/snowy_is_a_peasent.png', 
-    'images/art/lowres/snowy_is_a_peasent_lowres.webp',`
+colCreator('snowy_is_a_peasent',`
     King Yosho
-    `);
+    `, 0);
 
-const sixtyNineDiv = document.getElementById('sixtyNine');
-colCreator(sixtyNineDiv, 
-    'images/art/sixtyNine.png', 
-    'images/art/lowres/sixtyNine_lowres.webp',`
+colCreator('sixtyNine',`
     nice
-    `);
+    `, 0);
 
-const yoshobdayDiv = document.getElementById('yoshobday');
-colCreator(yoshobdayDiv, 
-    'images/art/yoshobday.png', 
-    'images/art/lowres/yoshobday_lowres.webp',`
+colCreator('yoshobday',`
     Birthday art
-    `);
+    `, 0);
 
-const chistmasDiv = document.getElementById('chistmas');
-colCreator(chistmasDiv, 
-    'images/art/chistmas.png', 
-    'images/art/lowres/chistmas_lowres.webp',`
+colCreator('chistmas',`
     Christmas pfps for both of us
-    `);
+    `, 0);
 
-const backroomsDiv = document.getElementById('backrooms');
-colCreator(backroomsDiv, 
-    'images/art/backrooms.png', 
-    'images/art/lowres/backrooms_lowres.webp',`
+colCreator('backrooms',`
     Yosho stuck in the backrooms
-    `);
+    `, 0);
 
-const owo2Div = document.getElementById('owo2');
-colCreator(owo2Div, 
-    'images/art/owo2.png', 
-    'images/art/lowres/owo2_lowres.webp',`
+colCreator('owo2',`
     Yosho bein a cute lil femboy
-    `);
+    `, 0);
 
-const zerHugDiv = document.getElementById('zerHug');
-colCreator(zerHugDiv, 
-    'images/art/zerHug.png', 
-    'images/art/lowres/zerHug_lowres.webp',`
+colCreator('zerHug',`
     Yosho hugging zer
-    `);
+    `, 0);
 
-const madDiv = document.getElementById('mad');
-colCreator(madDiv, 
-    'images/art/mad.gif', 
-    'images/art/mad.gif',`
+colCreator('mad.gif',`
     Yosho mad at Snowy for mewoing
-    `);
+    `, 0);
 
-const yoshoowoDiv = document.getElementById('yoshoowo');
-colCreator(yoshoowoDiv, 
-    'images/art/yoshoowo.png', 
-    'images/art/lowres/yoshoowo_lowres.webp',`
+colCreator('yoshoowo',`
     Yosho wearing the cute socks &#128563
-    `);
+    `, 0);
 
-const chompDiv = document.getElementById('chomp');
-colCreator(chompDiv, 
-    'images/art/chomp.png', 
-    'images/art/lowres/chomp_lowres.webp',`
+colCreator('chomp',`
     Yosho telling <a href="https://ninjago.fandom.com/wiki/Chompy" target="_blank">Chompy</a> to stand down<br>
-    `);
+    `, 0);
 
-const noCuteDiv = document.getElementById('noCute');
-colCreator(noCuteDiv, 
-    'images/art/noCute.png', 
-    'images/art/lowres/noCute_lowres.webp',`
+colCreator('noCute',`
     no cute
-    `);
+    `, 0);
 
-const yoshoRunDiv = document.getElementById('yoshoRun');
-colCreator(yoshoRunDiv, 
-    'images/art/yoshoRun.png', 
-    'images/art/lowres/yoshoRun_lowres.webp',`
+colCreator('yoshoRun',`
     I'm not giving context
-    `);
+    `, 0);
 
 
 //  sin
 
 
-const jjkDiv = document.getElementById('jjk');
-colCreator(jjkDiv, 
-    'images/art/jjk.png', 
-    'images/art/lowres/jjk_lowres.webp',`
+colCreator('jjk',`
     Jujutsu Kaisen
-    `);
+    `, 0);
 
-const sinMemeDiv = document.getElementById('sinMeme');
-colCreator(sinMemeDiv, 
-    'images/art/sinMeme.png', 
-    'images/art/lowres/sinMeme_lowres.webp',`
+colCreator('sinMeme',`
     Sin in a bathtub
-    `);
+    `, 0);
 
-const sinBdayDiv = document.getElementById('sinBday');
-colCreator(sinBdayDiv, 
-    'images/art/sinBday.png', 
-    'images/art/lowres/sinBday_lowres.webp',`
+colCreator('sinBday',`
     Birthday art for Sin
-    `);
+    `, 0);
 
-const sinDiv = document.getElementById('sin');
-colCreator(sinDiv, 
-    'images/art/sin.png', 
-    'images/art/lowres/sin_lowres.webp',`
+colCreator('sin',`
     Sin
-    `);
+    `, 0);
 
-const furrySinDiv = document.getElementById('furrySin');
-colCreator(furrySinDiv, 
-    'images/art/furrySin.png', 
-    'images/art/lowres/furrySin_lowres.webp',`
+colCreator('furrySin',`
     Sin admitting he's a furry
-    `);
+    `, 0);
 
-const sinCrabsDiv = document.getElementById('sinCrabs');
-colCreator(sinCrabsDiv, 
-    'images/art/sinCrabs.png', 
-    'images/art/lowres/sinCrabs_lowres.webp',`
+colCreator('sinCrabs',`
     Inside joke
-    `);
+    `, 0);
 
-const sleepySinDiv = document.getElementById('sleepySin');
-colCreator(sleepySinDiv, 
-    'images/art/sleepySin.png', 
-    'images/art/lowres/sleepySin_lowres.webp',`
+colCreator('sleepySin',`
     Sleepy Sin
-    `);
+    `, 0);
 
-const sinInABoatDiv = document.getElementById('sinInABoat');
-colCreator(sinInABoatDiv, 
-    'images/art/sinInABoat.png', 
-    'images/art/lowres/sinInABoat_lowres.webp',`
+colCreator('sinInABoat',`
     Sin in a boat
-    `);
+    `, 0);
 
 
   //  others
 
-const snowiDiv = document.getElementById('snowi');
-colCreator(snowiDiv, 
-    'images/art/snowi.png', 
-    'images/art/lowres/snowi_lowres.webp',`
+colCreator('snowi',`
     Another art trade, but this time with another <a target="_blank" href="https://bsky.app/profile/snowiwakgoreng.bsky.social">snowi</a> lol
-    `);
+    `, 0);
 
-const frenDiv = document.getElementById('fren');
-colCreator(frenDiv, 
-    'images/art/fren.png', 
-    'images/art/lowres/fren_lowres.webp',`
+colCreator('fren',`
     Another art trade
-    `);
+    `, 0);
 
-const arttrade3Div = document.getElementById('arttrade3');
-colCreator(arttrade3Div, 
-    'images/art/arttrade3.png', 
-    'images/art/lowres/arttrade3_lowres.webp',`
+colCreator('arttrade3',`
     Another art trade
-    `);
+    `, 0);
 
-const friendDiv = document.getElementById('friend');
-colCreator(friendDiv, 
-    'images/art/friend.png', 
-    'images/art/lowres/friend_lowres.webp',`
+colCreator('friend',`
     Commision for a friend
-    `);
+    `, 0);
 
-const aspenDiv = document.getElementById('aspen');
-colCreator(aspenDiv, 
-    'images/art/aspen.png', 
-    'images/art/lowres/aspen_lowres.webp',`
+colCreator('aspen',`
     Art for Aspen
-    `);
+    `, 0);
 
-const kyatDiv = document.getElementById('kyat');
-colCreator(kyatDiv, 
-    'images/art/kyat.png', 
-    'images/art/lowres/kyat_lowres.webp',`
+colCreator('kyat',`
     Kyat
-    `);
+    `, 0);
 
-const sunset2Div = document.getElementById('sunset2');
-colCreator(sunset2Div, 
-    'images/art/sunset2.png', 
-    'images/art/lowres/sunset2_lowres.webp',`
+colCreator('sunset2',`
     Sunset with shading
-    `);
+    `, 0);
 
-const cornDiv = document.getElementById('corn');
-colCreator(cornDiv, 
-    'images/art/corn.png', 
-    'images/art/lowres/corn_lowres.webp',`
+colCreator('corn',`
     Corn
-    `);
+    `, 0);
 
-const novaDiv = document.getElementById('nova');
-colCreator(novaDiv, 
-    'images/art/nova.png', 
-    'images/art/lowres/nova_lowres.webp',`
+colCreator('nova',`
     Nova
-    `);
+    `, 0);
 
-const sweaterDiv = document.getElementById('sweater');
-colCreator(sweaterDiv, 
-    'images/art/sweater.png', 
-    'images/art/lowres/sweater_lowres.webp',`
-    sweater
-    `);
-
-const samyoDiv = document.getElementById('samyo');
-colCreator(samyoDiv, 
-    'images/art/samyo.png', 
-    'images/art/lowres/samyo_lowres.webp',`
+colCreator('samyo',`
     Birthday gift for <a target="_blank" href="https://www.twitter.com/samyofox">Samyo</a>
-    `);
+    `, 0);
 
-const midderDiv = document.getElementById('midder');
-colCreator(midderDiv, 
-    'images/art/midder.png', 
-    'images/art/lowres/midder_lowres.webp',`
+colCreator('midder',`
     Midder
-    `);
+    `, 0);
 
-const midderGifDiv = document.getElementById('midderGif');
-colCreator(midderGifDiv, 
-    'images/art/midder.gif', 
-    'images/art/midder.gif',`
+colCreator('midderGif.gif',`
     Midder
-    `);
+    `, 0);
 
-const midDiv = document.getElementById('mid');
-colCreator(midDiv, 
-    'images/art/mid.png', 
-    'images/art/lowres/mid_lowres.webp',`
+colCreator('mid',`
     Mid
-    `);
+    `, 0);
 
-const hugGrimDiv = document.getElementById('hugGrim');
-colCreator(hugGrimDiv, 
-    'images/art/hugGrim.png', 
-    'images/art/lowres/hugGrim_lowres.webp',`
+colCreator('hugGrim',`
     Snow hugging Grimm
-    `);
+    `, 0);
 
-const griimmDiv = document.getElementById('griimm');
-colCreator(griimmDiv, 
-    'images/art/griimm.png', 
-    'images/art/lowres/griimm_lowres.webp',`
+colCreator('griimm',`
     Grimm
-    `);
+    `, 0);
 
-const comissionDiv = document.getElementById('comission');
-colCreator(comissionDiv, 
-    'images/art/comission.png', 
-    'images/art/lowres/comission_lowres.webp',`
+colCreator('comission',`
     comission
-    `);
+    `, 0);
 
-const arttrade2Div = document.getElementById('arttrade2');
-colCreator(arttrade2Div, 
-    'images/art/arttrade2.png', 
-    'images/art/lowres/arttrade2_lowres.webp',`
-    Art Trade 2
-    `);
+colCreator('arttrade2',`
+    Art Trade #3
+    `, 0);
 
-const arttradeDiv = document.getElementById('arttrade');
-colCreator(arttradeDiv, 
-    'images/art/arttrade.png', 
-    'images/art/lowres/arttrade_lowres.webp',`
-    Art Trade
-    `);
+colCreator('arttrade',`
+    Art Trade #2
+    `, 0);
 
-const labcoatDiv = document.getElementById('labcoat');
-colCreator(labcoatDiv, 
-    'images/art/labcoat.png', 
-    'images/art/lowres/labcoat_lowres.webp',`
+colCreator('arttradeprobably1',`
+    Art Trade #1
+    `, 0);
+
+colCreator('labcoat',`
     lab coat
-    `);
+    `, 0);
 
-const fuDiv = document.getElementById('fu');
-colCreator(fuDiv, 
-    'images/art/fu.png', 
-    'images/art/lowres/fu_lowres.webp',`
+colCreator('fu',`
     f u
-    `);
+    `, 0);
 
-const twinDiv = document.getElementById('twin');
-colCreator(twinDiv, 
-    'images/art/twin.png', 
-    'images/art/lowres/twin_lowres.webp',`
+colCreator('twin',`
     Snowy's twin
-    `);
+    `, 0);
 
-const deadsonaDiv = document.getElementById('deadsona');
-colCreator(deadsonaDiv, 
-    'images/art/deadsona.png', 
-    'images/art/lowres/deadsona_lowres.webp',`
+colCreator('deadsona',`
     dead sona
-    `);
+    `, 0);
 
-const tailsDiv = document.getElementById('tails');
-colCreator(tailsDiv, 
-    'images/art/tails.png', 
-    'images/art/lowres/tails_lowres.webp',`
+colCreator('tails',`
     Tails with a corrupted file
-    `);
+    `, 0);
 
-const hugDiv = document.getElementById('hug');
-colCreator(hugDiv, 
-    'images/art/hug.png', 
-    'images/art/lowres/hug_lowres.webp',`
+colCreator('hug',`
     Someone hugging Snowy
-    `);
+    `, 0);
 
-const matDiv = document.getElementById('mat');
-colCreator(matDiv, 
-    'images/art/mat.png', 
-    'images/art/lowres/mat_lowres.webp',`
+colCreator('mat',`
     mat
-    `);
+    `, 0);
 
-const mcdonaldsDiv = document.getElementById('mcdonalds');
-colCreator(mcdonaldsDiv, 
-    'images/art/mcdonalds.png', 
-    'images/art/lowres/mcdonalds_lowres.webp',`
+colCreator('mcdonalds',`
     McDonalds oc
-    `);
+    `, 0);
 
-const spazzDiv = document.getElementById('spazz');
-colCreator(spazzDiv, 
-    'images/art/spazz.png', 
-    'images/art/lowres/spazz_lowres.webp',`
+colCreator('spazz',`
     batt
-    `);
+    `, 0);
 
-const bunnyDiv = document.getElementById('bunny');
-colCreator(bunnyDiv, 
-    'images/art/bunny.png', 
-    'images/art/lowres/bunny_lowres.webp',`
+colCreator('bunny',`
     bunny
-    `);
+    `, 0);
 
-const eightPeepsDiv = document.getElementById('eightPeeps');
-colCreator(eightPeepsDiv, 
-    'images/art/eightPeeps.png', 
-    'images/art/lowres/eightPeeps_lowres.webp',`
+colCreator('eightPeeps',`
     8 peoples
-    `);
+    `, 0);
 
-const whoThisDiv = document.getElementById('whoThis');
-colCreator(whoThisDiv, 
-    'images/art/whoThis.png', 
-    'images/art/lowres/whoThis_lowres.webp',`
+colCreator('whoThis',`
     who this
-    `);
+    `, 0);
 
-const whoThis2Div = document.getElementById('whoThis2');
-colCreator(whoThis2Div, 
-    'images/art/whoThis2.png', 
-    'images/art/lowres/whoThis2_lowres.webp',`
+colCreator('whoThis2',`
     who this 2
-    `);
+    `, 0);
 
-const irlArtDiv = document.getElementById('irlArt');
-colCreator(irlArtDiv, 
-    'images/art/irlArt.png', 
-    'images/art/lowres/irlArt_lowres.webp',`
+colCreator('irlArt',`
     Irl art
-    `);
+    `, 0);
 
-const smashBALLDiv = document.getElementById('smashBALL');
-colCreator(smashBALLDiv, 
-    'images/art/smashBALL.png', 
-    'images/art/lowres/smashBALL_lowres.webp',`
+colCreator('bearr',`
+    bearr
+    `, 0);
+
+colCreator('smashBALL',`
     Smash ball
-    `);
+    `, 0);
 
-const hoomanDiv = document.getElementById('hooman');
-colCreator(hoomanDiv, 
-    'images/art/hooman.png', 
-    'images/art/lowres/hooman_lowres.webp',`
+colCreator('hooman',`
     hooman
-    `);
+    `, 0);
 
-const zeroDiv = document.getElementById('zero');
-colCreator(zeroDiv, 
-    'images/art/zero.png', 
-    'images/art/lowres/zero_lowres.webp',`
+colCreator('zero',`
     hooman 2.0
-    `);
+    `, 0);
 
-const acrDiv = document.getElementById('acr');
-colCreator(acrDiv, 
-    'images/art/acr.png', 
-    'images/art/lowres/acr_lowres.webp',`
+colCreator('acr',`
     car
-    `);
+    `, 0);
     
+}
+
+
+//     snowy page
+
+
+if (document.getElementById('snowyPage')) {
+
+    colCreator('sticker', `
+    <a href="https://t.me/addstickers/snowynewpack" target="_blank">Snowy stickerpack</a> by <a href="https://www.etsy.com/listing/1699832198" target="_blank">V1RTUALTRAPP1</a> 
+    `, 1); 
+
+    colCreator('sticker2', `
+    <a href="https://t.me/addstickers/yoshorandom" target="_blank">Snowy stickerpack #2</a> by PulexArt<br>
+    <a href="https://www.pulexart.com/store/p80/Pride_Stickers_2023.html" target="_blank">(1)</a>
+    <a href="https://www.pulexart.com/store/p97/Pride_Stickers_2024.html" target="_blank">(2)</a>
+    <a href="https://www.pulexart.com/store/p26/australian-shepherd.html" target="_blank">(3)</a>
+    <a href="https://www.pulexart.com/store/p91/Valentines_Stickers.html" target="_blank">(4)</a>
+
+    `, 1); 
+
+    colCreator('1', `
+    Snowy headshot by a friend
+    `, 1); 
+
+    colCreator('real2', `
+    Snowy headshot by someone who's username idr
+    `, 1); 
+
+    colCreator('maid1', `
+    First ever maid snowy
+    `, 1); 
+ 
+
+    colCreator('2', `
+    Long socks by <a href="https://gooseking.square.site" target="_blank">Gooseking</a>
+    `, 1);
+
+    colCreator('3', `
+    Headshot by <a href="https://gooseking.square.site/" target="_blank">Gooseking</a>
+    `, 1)
+
+    colCreator('4', `
+    Other headshot by <a href="https://www.etsy.com/shop/nepukamiArts" target="_blank">nepukamiArts</a>
+    `, 1); 
+
+    colCreator('5', `
+    Brainfreeze by <u>@eggfry on Discord</u>
+    `, 1); 
+
+    colCreator('sin1', `
+    Maid Snowy by <a href="https://www.twitter.com/sinotus13" target="_blank">Sinotus</a>, <a href="images/snowy/sin1_alt.png">Alternate version.</a>
+    `, 1); 
+
+    colCreator('sin2', `
+    Yosho hug by <a href="https://www.twitter.com/sinotus13" target="_blank">Sin</a>
+    `, 1); 
+
+    colCreator('kyat', `
+    Yosho hug #2 by <a href="https://twitter.com/Kyat_Nguyen" target="_blank">Kyat</a>
+    `, 1); 
+
+    colCreator('V1RTUALTRAPP1', `
+    Ych by <a href="https://www.etsy.com/listing/1627367588" target="_blank">V1RTUALTRAPP</a>
+    `, 1);
+
+    colCreator('V1RTUALTRAPP2', `
+    Ych by <a href="https://www.etsy.com/listing/1588749552" target="_blank">V1RTUALTRAPP</a>
+    `, 1);
+
+    colCreator('V1RTUALTRAPP3', `
+    Cuddle ych by <a href="https://www.etsy.com/listing/1625109246/christmas-cuddles-ych-2-ocs-cheap-read" target="_blank">V1RTUALTRAPP</a>
+    `, 1);
+
+    colCreator('nyxie', `
+    Icecream licc by <a href="https://www.etsy.com/listing/1778678177/sweet-treat-ych" target="_blank">Nyxie</a>
+    `, 1);
+
+    colCreator('nyxie2', `
+    Snowy grabbin yosho's cheecks, ych by <a target="_blank" href="https://www.etsy.com/listing/1724299481/squishy-cheekies-ych">Nyxie</a>
+    `, 1);
+
+    colCreator('HanutedHarvest', `
+    Cuddle commision by  <a href="https://www.etsy.com/shop/https://www.etsy.com/shop/HanutedHarvest" target="_blank">HanutedHarvest</a>
+    `, 1);
+
+    colCreator('irl', `
+    Bug dawg snowy
+    `, 1);
+
+    colCreator('snowi', `
+    Snowy talking and yosho listening (for the first time in 3 years), drawn by <a target="_blank" href="https://bsky.app/profile/snowiwakgoreng.bsky.social">Snowipawbs</a> lol.
+    `, 1);
+
+    colCreator('sirsquidbee', `
+    Divorse selfiee!! ☆:.｡.o(≧▽≦)o.｡.:☆
+    <br>by <a target="_blank" href="https://ko-fi.com/sirsquidbee">sirsquidbee</a>
+    `, 1);
+
+    colCreator('corn', `
+    Headshot by <a target="_blank" href="https://twitter.com/CornTheRatKing">Corn</a>
+    `, 1);
+
+
+}
