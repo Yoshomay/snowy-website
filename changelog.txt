@@ -1,31 +1,7 @@
-* Added the changelog (/changelog.txt) and the changelog/ folder
-* Now tracking version numbers (starting with 7.5)
-
-* Moved sweater from the others section to the snowy section on the homepage
-* Added sweater remake and arttradeprobably1
-
-* Lots of changes from the yoshomay.com 7.5 update have been ported here aswell:
-
-    * Released the discord server for this and snowy's site, permanent invite link on /index
-
-    * Fixed the background color of the alpenglow theme to blend into the image at the top far better
-    * Added the borders to the grids on the oldreddit theme
-
-    * Made the width of the grids adjustable
-    * Made the width of the spacing between the grid's contents 230px instead of the old 250px to reduce wasted horizontal space
-
-    * Updated /snowy to also use /gridInput.js
-    * Changed all the lowres images in /images/art/lowres/ and images/snowy/lowres to remove the _lowres from the filename, so `sin1_lowres.webp` is now `sin1.webp`
-
-    * (behind the scenes change but) made the grid elements on the homepage and /snowy be created more by the colCreator() function, so if i want to add a new image what before was
-
-    ```const falke1Div = document.getElementById('falke1');
-    colCreator(falke1Div, 'images/pfp.png', 'images/pfp.png',`
-        This is my pfp by <a href="https://www.twitter.com/hyenapaine" target="_blank">@hyenapaine</a> on Twitter1
-        `);```
-
-    has now become simply
-
-    ```colCreator('falke1',
-        `This is my pfp by <a href="https://www.twitter.com/hyenapaine" target="_blank">@hyenapaine</a> on Twitter1`
-        );```
+* Added nervousMaid
+* Added yoshoWiggle
+* Added snowyWiggle
+* Made the css files and theme.js load in using absolute paths not relative paths (/css/theme.css instead of css/theme.css), so that way 404 pages like snowynotgay.com/asdf/asdf will now display correctly.
+* Removed the resize handles from the grids
+* Added Zorin OS Dark Theme
+* Made the theme menu not be so low down on the goldsrc theme

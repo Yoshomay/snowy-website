@@ -1,0 +1,4 @@
+* Made the css files and theme.js load in using absolute paths not relative paths (/css/theme.css instead of css/theme.css), so that way 404 pages like yoshomay.com/asdf/asdf will now display correctly.
+* Removed the resize handles from the grids
+* Added Zorin OS Dark Theme
+* Made the theme menu not be so low down on the goldsrc theme

@@ -36,14 +36,22 @@ function colCreator(id, text, whichPage) {
 
 
 if (document.getElementById('mainPage')) {
-colCreator('suckmydick', `
-    He is getting desperate
-    `, 0);
 
+colCreator('snowyWiggle.gif',`
+    Very wiggely snowy, created with <a href="https://wigglypaint.net/" target="_blank">wigglypaint.net/</a>
+    `, 0)
+
+colCreator('nervousMaid',`
+    Another snowy maid lol, this time very tall
+    `, 0)
 
 colCreator('sweaterRemake',`
     Another remake, this time of the sweater one
     `, 0)
+
+colCreator('suckmydick', `
+    He is getting desperate
+    `, 0);
 
 colCreator('snowAtNightRemastered',`
     Remake of the snowy at night piece
@@ -232,6 +240,11 @@ colCreator('firstsnowy',`
 
 
 //  yosho
+
+colCreator('yoshoWiggle.gif',`
+    Wiggely yosho, like the snowy one
+    `, 0)
+
 
 colCreator('yoshoKitchenLick',`
     Snowy lickin yosho uwu
