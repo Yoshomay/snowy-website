@@ -674,5 +674,18 @@ if (document.getElementById('snowyPage')) {
     Headshot by <a target="_blank" href="https://twitter.com/CornTheRatKing">Corn</a>
     `, 1);
 
+    colCreator('w1ndsher', `
+    Starry headshot by <a target="blank" href="https://www.tiktok.com/@w1ndsher">w1ndsher</a>
+    `, 1);
+
+    colCreator('woo', `
+    Woo, by <a target="_blank" href="https://www.etsy.com/people/leaannepeach">Maisie Peach </a>
+    `, 1);
+
+    colCreator('drPerky', `
+    Dr. Perky (the real snowy), by <a target="_target" href="https://www.etsy.com/people/icrqdz0xpebt7mkv">V1RTUALTRAPP</a>
+    `, 1)
+
 
 }
+
