@@ -2,7 +2,6 @@
   border-radius: 10px;
   font-size: 15px;
   padding: 7px;
-  color: white;
   width: -moz-fit-content;
   width: fit-content;
 }
@@ -86,20 +85,32 @@
 }
 
 .topGrid {
-  max-width: 900px;
+  grid-gap: 2em;
 }
 .topGrid .col {
   margin: 0 auto;
 }
-@media screen and (min-width: 627px) {
+@media screen and (min-width: 1086px) {
   .topGrid {
-    grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
+    grid-template-columns: repeat(auto, minmax(100px, 1fr));
+    max-width: 1086px;
+  }
+}
+@media screen and (min-width: 481px) and (max-width: 1089px) {
+  .topGrid {
+    grid-template-columns: repeat(2, minmax(100px, 1fr));
+    width: -moz-fit-content;
+    width: fit-content;
   }
 }
 @media screen and (max-width: 480px) {
   .topGrid .col {
-    margin-bottom: 70px;
+    margin-bottom: 20px;
   }
+}
+.topGrid .col {
+  height: -moz-fit-content;
+  height: fit-content;
 }
 
 .topGridDivs {

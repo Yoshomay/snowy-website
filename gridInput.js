@@ -679,7 +679,7 @@ if (document.getElementById('snowyPage')) {
     `, 1);
 
     colCreator('woo', `
-    Woo, by <a target="_blank" href="https://www.etsy.com/people/leaannepeach">Maisie Peach </a>
+    Woo, by <a target="_blank" href="https://www.etsy.com/people/leaannepeach">Maisie Peach</a>
     `, 1);
 
     colCreator('drPerky', `

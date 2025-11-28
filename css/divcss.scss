@@ -2,7 +2,6 @@
   border-radius: 10px;
   font-size: 15px;
   padding: 7px;
-  color: white;
   width: fit-content;
 
   &:active {cursor: not-allowed;}
@@ -68,10 +67,12 @@
       
 .topGrid {
     .col {margin: 0 auto;}
-    @media screen and (min-width: 627px) {grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));}
-    @media screen and (max-width: 480px) {.col {margin-bottom: 70px;};}
-    max-width:900px;
-}
+    @media screen and (min-width: 1086px) {grid-template-columns: repeat(auto, minmax(100px, 1fr)); max-width:1086px;}
+    @media screen and (min-width: 481px) and (max-width: 1089px) {grid-template-columns: repeat(2, minmax(100px, 1fr)); width: fit-content;}
+    @media screen and (max-width: 480px) {.col {margin-bottom: 20px;};}
+    grid-gap: 2em;
+    .col {height: fit-content;}
+  }
 
 .topGridDivs {
   max-width: 260px;
