@@ -686,6 +686,10 @@ if (document.getElementById('snowyPage')) {
     Dr. Perky (the real snowy), by <a target="_target" href="https://www.etsy.com/people/icrqdz0xpebt7mkv">V1RTUALTRAPP</a>
     `, 1)
 
+    colCreator('chalk', `
+    Snowy Yosho hug by <a href="https://bsky.app/profile/chalkolate.bsky.social" target="_blank">Chalk</a>
+    `, 1);
+
 
 }
 

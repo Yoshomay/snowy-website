@@ -1,4 +1,1 @@
-* Rewrote most of the theme.js file to make it not terrible
-* Added readCookie() and setCookie() to make reading and setting cookies far easier (makes me more likely to use them in the future for more things)
-* Added Snowy's ref to the top grid
-* Made the top grid have 3 sizes depending on the screen size
+* Added chalk to /snowy
