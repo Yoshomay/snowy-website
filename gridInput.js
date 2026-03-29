@@ -1,10 +1,3 @@
-/*function colCreator(divid, image, imageLowres, text) {
-    divid.innerHTML = `
-    <div class="col">
-    <a target="_blank" href="${image}"><img src="${imageLowres}"></a>
-    ${text}
-    </div>`}*/
-
 function colCreator(id, text, whichPage) {
 
     if (id.endsWith('.gif')) {fileType = 'gif'; lowresFileType = 'gif'; id = id.slice(0, -4);}
@@ -37,17 +30,21 @@ function colCreator(id, text, whichPage) {
 
 if (document.getElementById('mainPage')) {
 
+colCreator('raisepaw', `
+    He issssss
+    `, 0);
+
 colCreator('snowyWiggle.gif',`
     Very wiggely snowy, created with <a href="https://wigglypaint.net/" target="_blank">wigglypaint.net/</a>
-    `, 0)
+    `, 0);
 
 colCreator('nervousMaid',`
     Another snowy maid lol, this time very tall
-    `, 0)
+    `, 0);
 
 colCreator('sweaterRemake',`
     Another remake, this time of the sweater one
-    `, 0)
+    `, 0);
 
 colCreator('suckmydick', `
     He is getting desperate
@@ -580,7 +577,7 @@ colCreator('acr',`
 if (document.getElementById('snowyPage')) {
 
     colCreator('sticker', `
-    <a href="https://t.me/addstickers/snowynewpack" target="_blank">Snowy stickerpack</a> by <a href="https://www.etsy.com/listing/1699832198" target="_blank">V1RTUALTRAPP1</a> 
+    <a href="https://t.me/addstickers/snowynewpack" target="_blank">Snowy stickerpack</a> by <a href="https://www.etsy.com/shop/V1RTUALTRAPP" target="_blank">V1RTUALTRAPP1</a> 
     `, 1); 
 
     colCreator('sticker2', `
@@ -621,6 +618,10 @@ if (document.getElementById('snowyPage')) {
     Brainfreeze by <u>@eggfry on Discord</u>
     `, 1); 
 
+    colCreator('fleet', `
+    Hallow purple, by <a href="https://www.bsky.app/profile/fleetforall.bsky.social" target="_blank">FleetForAll</a>
+    `, 1);
+
     colCreator('sin1', `
     Maid Snowy by <a href="https://www.twitter.com/sinotus13" target="_blank">Sinotus</a>, <a href="images/snowy/sin1_alt.png">Alternate version.</a>
     `, 1); 
@@ -634,23 +635,23 @@ if (document.getElementById('snowyPage')) {
     `, 1); 
 
     colCreator('V1RTUALTRAPP1', `
-    Ych by <a href="https://www.etsy.com/listing/1627367588" target="_blank">V1RTUALTRAPP</a>
+    Ych by <a href="https://www.etsy.com/shop/V1RTUALTRAPP" target="_blank">V1RTUALTRAPP</a>
     `, 1);
 
     colCreator('V1RTUALTRAPP2', `
-    Ych by <a href="https://www.etsy.com/listing/1588749552" target="_blank">V1RTUALTRAPP</a>
+    Ych by <a href="https://www.etsy.com/shop/V1RTUALTRAPP" target="_blank">V1RTUALTRAPP</a>
     `, 1);
 
     colCreator('V1RTUALTRAPP3', `
-    Cuddle ych by <a href="https://www.etsy.com/listing/1625109246/christmas-cuddles-ych-2-ocs-cheap-read" target="_blank">V1RTUALTRAPP</a>
+    Cuddle ych by <a href="https://www.etsy.com/shop/V1RTUALTRAPP" target="_blank">V1RTUALTRAPP</a>
     `, 1);
 
     colCreator('nyxie', `
-    Icecream licc by <a href="https://www.etsy.com/listing/1778678177/sweet-treat-ych" target="_blank">Nyxie</a>
+    Icecream licc by <a href="https://www.etsy.com/shop/NyxieDraws" target="_blank">Nyxie</a>
     `, 1);
 
     colCreator('nyxie2', `
-    Snowy grabbin yosho's cheecks, ych by <a target="_blank" href="https://www.etsy.com/listing/1724299481/squishy-cheekies-ych">Nyxie</a>
+    Snowy grabbin yosho's cheecks, ych by <a target="_blank" href="https://www.etsy.com/shop/NyxieDraws">Nyxie</a>
     `, 1);
 
     colCreator('HanutedHarvest', `
@@ -690,6 +691,17 @@ if (document.getElementById('snowyPage')) {
     Snowy Yosho hug by <a href="https://bsky.app/profile/chalkolate.bsky.social" target="_blank">Chalk</a>
     `, 1);
 
+    colCreator('reeky', `
+    Winows xp paint snowy, by <a href="https://www.tiktok.com/@the_reeky?_r=1&_t=ZP-93StVZU8Xba" target="_blank">the_reeky</a>
+    `, 1);
+
+    colCreator('jack', `
+    Huggggggg, by <a href="https://www.etsy.com/shop/JackofsometradesArt" target="_blank">JackofsometradesArt</a>
+    `);
+
+    colCreator('koiskastle', `
+    Gay ass snowy, by <a href="https://www.tiktok.com/@koiskastle" target="_blank">koiskastle</a>
+    `);
 
 }
 
