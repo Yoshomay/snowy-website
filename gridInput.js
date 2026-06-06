@@ -416,6 +416,10 @@ colCreator('sinInABoat',`
 
   //  others
 
+colCreator('sleepiKyat', `
+    Sleepi kyat
+    `, 0);
+
 colCreator('snowi',`
     Another art trade, but this time with another <a target="_blank" href="https://bsky.app/profile/snowiwakgoreng.bsky.social">snowi</a> lol
     `, 0);
@@ -702,6 +706,14 @@ if (document.getElementById('snowyPage')) {
     colCreator('koiskastle', `
     Gay ass snowy, by <a href="https://www.tiktok.com/@koiskastle" target="_blank">koiskastle</a>
     `);
+
+    colCreator('kyat2', `
+    Snowy with his bone, drawn by <a href="https://twitter.com/Kyat_Nguyen" target="_blank">kyat</a> as well
+    `);
+
+    colCreator('iHeartPeeing', `
+    I ❤️ peeing, drawn by <a href="https://x.com/drainddog" target="_blank">Drainddog</a>
+    `)
 
 }
 
