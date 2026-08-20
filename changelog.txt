@@ -1,0 +1,2 @@
+* added practice to /index
+* added kyat3, bday animation, and snowybone to /snowy
