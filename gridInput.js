@@ -30,6 +30,10 @@ function colCreator(id, text, whichPage) {
 
 if (document.getElementById('mainPage')) {
 
+colCreator('practice', `
+    Practice art of snowithy
+    `, 0);
+
 colCreator('raisepaw', `
     He issssss
     `, 0);
