@@ -30,6 +30,10 @@ function colCreator(id, text, whichPage) {
 
 if (document.getElementById('mainPage')) {
 
+colCreator('doggynothink', `
+    Doggy no think
+    `, 0);
+
 colCreator('practice', `
     Practice art of snowithy
     `, 0);
@@ -717,7 +721,15 @@ if (document.getElementById('snowyPage')) {
 
     colCreator('iHeartPeeing', `
     I ❤️ peeing, drawn by <a href="https://x.com/drainddog" target="_blank">Drainddog</a>
-    `)
+    `);
+
+    colCreator('k9khaos_.gif', `
+    Autumn coffee, by <a href="https://www.tiktok.com/@k9khaos" target="_blank">k9khaos_</a> 
+    `);
+
+    colCreator('shilohs', `
+    Am just pubby 3:, by <a href="https://www.instagram.com/shilohs_heart_in_art" target="_blank">shilohs_heart_in_art</a>
+    `);
 
 }
 
